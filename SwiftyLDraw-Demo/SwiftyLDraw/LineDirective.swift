@@ -10,16 +10,14 @@ import SceneKit
 
 public class LineDirective: Directive {
 
+    public var point1: SCNVector3?
+    public var point2: SCNVector3?
     
-}
+    public override init(lines: [String]) {
+        
+        super.init(lines: lines)
 
-extension LineDirective: LineParsable {
-    
-    public var point1: SCNVector3 {
-        return SCNVector3()
-    }
-    
-    public var point2: SCNVector3 {
-        return SCNVector3()
+        self.point1 = SCNVector3(elements: Array(fields[2...4]))
+        self.point2 = SCNVector3(elements: Array(fields[5...7]))
     }
 }

@@ -14,7 +14,7 @@ public class LDrawFile {
     
     public init() {
         
-        models = []
+        self.models = []
     }
     
     public convenience init(lines: [String]) {
@@ -25,7 +25,7 @@ public class LDrawFile {
         
         let model = LDrawModel(lines: lines)
         
-        models.append(model)
+        self.models.append(model)
     }
     
     public convenience init(filePath: String) {

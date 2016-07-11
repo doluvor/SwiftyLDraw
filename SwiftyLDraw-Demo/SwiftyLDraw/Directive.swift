@@ -14,17 +14,19 @@ public class Directive {
     public var fields: [String]
     
     public init() {
-        directiveType = .unknown
-        fields = []
+        
+        self.directiveType = .unknown
+        self.fields = [String]()
     }
     
-    public convenience init(lines: [String]) {
-
-        self.init()
+    public init(lines: [String]) {
+        
+        self.directiveType = .unknown
+        self.fields = [String]()
         
         if let firstLine = lines.first {
-            directiveType = firstLine.directiveType
-            fields = firstLine.fields
+            self.directiveType = firstLine.directiveType
+            self.fields = firstLine.fields
         }
     }
 }

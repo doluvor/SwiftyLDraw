@@ -14,7 +14,7 @@ public class LDrawModel {
     
     public init() {
         
-        directives = []
+        self.directives = []
     }
     
     public convenience init(lines: [String]) {
@@ -43,7 +43,7 @@ public class LDrawModel {
                 continue
             }
             
-            directives.append(directive)
+            self.directives.append(directive)
         }
     }
 }
